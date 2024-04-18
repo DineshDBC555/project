@@ -1,0 +1,22 @@
+
+<div>
+  <h2>Add New Customer</h2>
+  <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" placeholder="Name">
+      <mat-error *ngIf="customerForm.get('name')?.invalid">Name is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" placeholder="Email">
+      <mat-error *ngIf="customerForm.get('email')?.invalid">Invalid email format</mat-error>
+    </mat-form-field>
+
+    <div class="button-container">
+      <button mat-raised-button class="warn-button mx-1" type="button" (click)="closeDialog()" >Close</button>
+      <button mat-raised-button class="primary-button mx-1" type="submit" [disabled]="customerForm.invalid">Submit</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,24 @@
+
+<div>
+    <h2>Edit Customer</h2>
+    <form [formGroup]="customerForm" (ngSubmit)="onSubmit()" class="form-container">
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" placeholder="Name">
+            <mat-error *ngIf="customerForm.get('name')?.invalid">Name is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" placeholder="Email">
+            <mat-error *ngIf="customerForm.get('email')?.hasError('required')">Email is required</mat-error>
+            <mat-error *ngIf="customerForm.get('email')?.hasError('email')">Invalid email format</mat-error>
+        </mat-form-field>
+
+        <div class="button-container">
+            <button mat-raised-button class="warn-button" type="button" (click)="closeDialog()">Cancel</button>
+            <button mat-raised-button class="primary-button" type="submit"
+                [disabled]="customerForm.invalid">Save</button>
+        </div>
+    </form>
+</div>

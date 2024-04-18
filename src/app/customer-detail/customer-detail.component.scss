@@ -1,0 +1,27 @@
+
+
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 20px; 
+  }
+  
+  .primary-button {
+    background-color: #1976d2; /* Primary button color */
+    color: white; /* Text color */
+  }
+  
+  .warn-button {
+    background-color: #d32f2f; /* Warn button color */
+    color: white; /* Text color */
+  }
+  
+  .primary-button, .warn-button {
+    margin-left: 8px; /* Add margin between buttons */
+  }
+  
