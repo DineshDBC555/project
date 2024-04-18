@@ -1,5 +1,15 @@
-Welcome to the Angular Customer Management Application repository!
+This is a customer management application built with Angular. It allows users to view, add, edit, and delete customer records.
 
+Features:
+1.View a list of customers
+
+2.Add a new customer
+
+3.Edit existing customer details
+
+4.Delete a customer
+
+Installation:
 1.Clone the Repository: git clone https://github.com/DineshDBC555/project.git
 
 2.Install Dependencies: npm install
@@ -8,7 +18,7 @@ Welcome to the Angular Customer Management Application repository!
 
 4.Access the Application: http://localhost:4200
 
-Technologies Used!
+Technologies Used:
 1.Angular
 
 2.Angular Material
